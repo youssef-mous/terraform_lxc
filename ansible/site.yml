@@ -3,6 +3,12 @@
   hosts: spark_cluster
   become: yes
   tasks:
+    - name: Update hosts file
+      lineinfile:
+        path: /etc/hosts
+        line: "{{ hostvars['spark-master']['ansible_host'] }} spark-master"
+        state: present
+
     - name: Install Java
       apt:
         name: default-jdk
