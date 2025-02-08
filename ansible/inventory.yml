@@ -6,13 +6,13 @@ all:
         master:
           hosts:
             spark-master:
-              ansible_host: 10.51.101.213
+              ansible_host: 10.216.151.62
         workers:
           hosts:
             spark-worker-1:
-              ansible_host: 10.51.101.128
+              ansible_host: 10.216.151.139
             spark-worker-2:
-              ansible_host: 10.51.101.77
+              ansible_host: 10.216.151.220
       vars:
         ansible_user: debian
         ansible_password: debian

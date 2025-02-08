@@ -15,9 +15,9 @@
         update_cache: yes
         state: present
 
-    - name: Download Spark
-      get_url:
-        url: "https://dlcdn.apache.org/spark/spark-3.5.4/spark-3.5.4-bin-hadoop3.tgz"
+    - name: Copy Spark
+      copy:
+        src: "/home/sosso/Downloads/spark-3.5.4-bin-hadoop3.tgz"
         dest: "/tmp/spark.tgz"
 
     - name: Extract Spark
